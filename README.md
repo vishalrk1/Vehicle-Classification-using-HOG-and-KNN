@@ -5,6 +5,8 @@
 - Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a KNN classifier.
 - Trying sliding-window technique and use your trained classifier to search for vehicles in images.
 
+**Complete Code is availabel [Here](https://github.com/vishalrk1/Vehicle-Classification-using-HOG-and-KNN/blob/main/Car_Detection_HOG_KNN.ipynb)**
+
 ## 1. Loading Imaes
 All the images from the vehicles and non-vehicles folder were loaded. It was resized into 64x64 and converted to vehicles.
 ```python
@@ -115,6 +117,8 @@ The final windows selected were-
 |-------------|---------|---------|--------|
 | 64x64       | 85      | 400     | 464    |
 | 80x80       | 80      | 400     | 480    |
+
+**Get all the windows list using [Windows_list.py](https://github.com/vishalrk1/Vehicle-Classification-using-HOG-and-KNN/blob/main/windows_list.py)
 
 ```python
 # function that returns the refined Windows
