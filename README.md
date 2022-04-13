@@ -142,3 +142,34 @@ def DrawCars(image,windows, converColorspace=False):
 **The total number of windows we got were 203. Below is the image for coverage of windows, i.e. the area where the code will be searching for windows**
 
     Total No of windows are  203
+
+<p float="left">
+  <img src="Images/Sliding-Window-Result.png" width="80%" />
+</p>
+
+Once we were able to detect the car by using Sliding Window approach. The next we decided to use a heatup to plot the final bounding boxes around the car. we defined a function add_heat that increments the pixel value of an black image the size of the original image at the location of each detected window which we called as refined Window.
+
+
+```python
+def add_heat(heatmap, bbox_list):
+    for box in bbox_list:
+        # Add += 1 for all pixels inside each bbox
+        # Assuming each "box" takes the form ((x1, y1), (x2, y2))
+        heatmap[box[0][1]:box[1][1], box[0][0]:box[1][0]] += 1
+    return heatmap 
+```
+
+The next step was to remove the false positives. This function blacks out the pixels who have value less than threshold value
+
+```python
+def apply_threshold(heatmap, threshold):
+    # Zero out pixels below the threshold
+    heatmap[heatmap <= threshold] = 0
+    # Return thresholded map
+    return heatmap
+```
+
+**Finally the next point is to draw bounding boxes on the final image**
+<p float="left">
+  <img src="Images/heatmap-Result.png" width="80%" />
+</p>
