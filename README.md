@@ -31,6 +31,14 @@ def data_read_images_from_files(file_names):
 
 ## 2. Feature Extraction
 - The code for extracting the hog features is mentioned in the function GetFeaturesFromHog. This function returns two things (hog_features, hog_image) if visualisation is set to true else this function returns only hog_features.
+
+### **HOG parameterts**
+|                 |         | 
+|-----------------|---------|
+| orientations    | 10      |
+| cellsPerBlock   | 2       | 
+| pixelsPerBlock  | 8       | 
+
 ```python
 def GetFeaturesFromHog(image,orient,cellsPerBlock,pixelsPerCell, visualise= False, feature_vector_flag=True):
     if(visualise==True):
@@ -177,3 +185,7 @@ def apply_threshold(heatmap, threshold):
 <p float="left">
   <img src="Images/heatmap-Result.png" width="80%" />
 </p>
+
+
+# References
+- [HOG Feature Extraction and KNN Classification for Detecting Vehicle in The Highway](https://www.researchgate.net/publication/343766462_HOG_Feature_Extraction_and_KNN_Classification_for_Detecting_Vehicle_in_The_Highway/fulltext/5f3e76d1458515b72931c082/HOG-Feature-Extraction-and-KNN-Classification-for-Detecting-Vehicle-in-The-Highway.pdf)
