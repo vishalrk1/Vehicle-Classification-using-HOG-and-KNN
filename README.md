@@ -101,7 +101,7 @@ scaled_X = X_scaler.transform(X_valid)
 ```
 ## 4. Training KNN Classifier
 
-The final step is to train the classifier. we used KNeighborsClassifier with default parameteres ans took n_neighbors as 7. 
+The final step is to train the classifier. we used KNeighborsClassifier with default parameteres ans took n_neighbors as 4. 
 we were able to achieve a test accuracy of 98.7 % and that too in less than 2 seconds!! Well that was really very fast!
 ```python
 knn = KNeighborsClassifier(n_neighbors=7,  n_jobs=-1)
