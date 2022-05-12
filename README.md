@@ -3,7 +3,7 @@
 ## Steps of the project
 
 - Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a KNN classifier.
-- Trying sliding-window technique and use your trained classifier to search for vehicles in images.
+- Trying sliding-window technique and use your trained classifier to search for vehicles in images
 
 **Complete Code is availabel [Here](https://github.com/vishalrk1/Vehicle-Classification-using-HOG-and-KNN/blob/main/Car_Detection_HOG_KNN.ipynb)**
 
